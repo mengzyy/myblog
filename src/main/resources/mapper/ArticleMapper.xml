@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mzy.blog.mapper.articleMapper">
+
+    <select id="getArticleByCateName"  resultType="com.mzy.blog.bean.Article">
+        SELECT
+         *
+        FROM
+            article
+        WHERE
+            article.article_categories = "${categoryName}"
+    </select>
+
+
+    <select id="getArticlesByTagName"  resultType="com.mzy.blog.bean.Article">
+        SELECT
+         *
+        FROM
+            article
+        WHERE
+            article.article_tags LIKE "%${tagName}%"
+    </select>
+
+
+
+
+
+</mapper>

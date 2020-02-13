@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>孟中艺</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="博客,个人,学习,IT,生活,孟中艺">
+    <meta name="description" content="爱编程,爱生活。">
+
+    <link rel="icon" type="image/x-icon" href="img/dog.jpg">
+    <link href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+    <link href="https://lib.baomitu.com/font-awesome/5.8.0/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/plugs_paging.css">
+    <link rel="stylesheet" type="text/css" href="css/music.css">
+
+
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://lib.baomitu.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--    &lt;!&ndash;使用共有头部&ndash;&gt;-->
+    <div th:replace="header :: header"></div>
+    <!--页面主体-->
+    <div id="main" style="margin-top: 16px">
+        <div class="am-g">
+            <div class="am-u-sm-12 am-u-lg-3 am-hide-md-down">
+                <div id="left">
+                    <div class="myCard">
+                        <div class="am-g">
+                            <div class="am-u-sm-5">
+                                <div class="img-title">
+                                    <img class="img" src="/img/dog.jpg" data-src="/img/dog.jpg">
+                                </div>
+                            </div>
+                            <div class="am-u-sm-7" style="padding: 0 20px 0 0;">
+                                <div class="img-words">
+                                    <h3 id="name">孟尝君</h3>
+                                    <small style="font-size: 13px;color: #808080ad">
+                                        春风得意马蹄疾，<br>
+                                        一日看尽长安花。
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div id="connection" style="font-size: 14px">
+                            <span style="color: #009688">微信：Wxnzyy00</span><br>
+                            <span style="color: #009688">QQ：591220496</span><br>
+                            <div class="img-wx">
+                                <img class="img" src="/img/wx.jpg" data-src="/img/dog.jpg">
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="icons-row">
+                            <div class="icons">
+                                <div class="icon">
+                                    <a href="https://github.com/18306299232" target="_blank"
+                                       class="am-icon-github am-icon-md " title="GitHub"
+                                       data-am-popover="{content: 'GitHub', trigger: 'hover focus'}"></a>
+                                </div>
+                                <div class="icon">
+                                    <a href="https://gitee.com/mengzhongyi" class="am-icon-gg am-icon-md"
+                                       target="_blank" title="码云"
+                                       data-am-popover="{content: '码云', trigger: 'hover focus'}"></a>
+                                </div>
+                                <!--                                <div class="icon">-->
+                                <!--                                    <a href="https://blog.csdn.net/swpu_ocean" target="_blank" title="CSDN"><img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/csdn.jpg" style="width: 30px" data-am-popover="{content: 'CSDN', trigger: 'hover focus'}"></a>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="icon">-->
+                                <!--                                    <a href="http://www.swpuiot.com" target="_blank" title="翼灵物联工作室"><img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/yilinglogo.png" style="width: 30px" data-am-popover="{content: '翼灵物联工作室', trigger: 'hover focus'}"></a>-->
+                                <!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--                    <div class="myStory" >-->
+                    <!--                        <div class="bg-myStory">-->
+                    <!--                            <div><a class="bg-myStory-a" href="/mystory">我的故事</a></div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="myStory-words">一盆小花，一杯清茶</div>-->
+                    <!--                    </div>-->
+
+                    <div class="myStory">
+                        <div class="bg-myGirl">
+                            <div><a class="bg-myGirl-a" href="/mylove" target="_blank">那些年</a></div>
+                        </div>
+                        <div class="myStory-words">写给过去</div>
+                    </div>
+
+                    <!--                    <div class="myStory" >-->
+                    <!--                        <div class="bg-myHeart">-->
+                    <!--                            <div><a class="bg-myGirl-a" href="/myheart" target="_blank">未来的路</a></div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="myStory-words">写给自己</div>-->
+                    <!--                    </div>-->
+
+                </div>
+            </div>
+            <div class="showArticle am-u-sm-12 am-u-lg-6">
+                <div class="articles">
+                    <div class="center">
+                        <div class="empty">
+                            <header class="article-header">
+                                <h1 itemprop="name">
+                                    <a class="article-title" href="#" target="_blank">&nbsp;</a>
+                                </h1>
+                                <div class="article-meta row">
+                                    <span class="articleType am-badge am-badge-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                </div>
+                            </header>
+                            <div class="article-entry" style="height: 200px">
+                            </div>
+                            <div class="read-all">
+                                <a href="#" target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                            <hr>
+                            <div class="article-tags">
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                                <!--<span class="likes"><i class="am-icon-heart"> 个喜欢</i></span>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="empty">
+                            <header class="article-header">
+                                <h1 itemprop="name">
+                                    <a class="article-title" href="#" target="_blank">&nbsp;</a>
+                                </h1>
+                                <div class="article-meta row">
+                                    <span class="articleType am-badge am-badge-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                </div>
+                            </header>
+                            <div class="article-entry" style="height: 200px">
+                            </div>
+                            <div class="read-all">
+                                <a href="#" target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                            <hr>
+                            <div class="article-tags">
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="empty">
+                            <header class="article-header">
+                                <h1 itemprop="name">
+                                    <a class="article-title" href="#" target="_blank">&nbsp;</a>
+                                </h1>
+                                <div class="article-meta row">
+                                    <span class="articleType am-badge am-badge-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                </div>
+                            </header>
+                            <div class="article-entry" style="height: 200px">
+                            </div>
+                            <div class="read-all">
+                                <a href="#" target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                            <hr>
+                            <div class="article-tags">
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="empty">
+                            <header class="article-header">
+                                <h1 itemprop="name">
+                                    <a class="article-title" href="#" target="_blank">&nbsp;</a>
+                                </h1>
+                                <div class="article-meta row">
+                                    <span class="articleType am-badge am-badge-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                </div>
+                            </header>
+                            <div class="article-entry" style="height: 200px">
+                            </div>
+                            <div class="read-all">
+                                <a href="#" target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                            <hr>
+                            <div class="article-tags">
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="empty">
+                            <header class="article-header">
+                                <h1 itemprop="name">
+                                    <a class="article-title" href="#" target="_blank">&nbsp;</a>
+                                </h1>
+                                <div class="article-meta row">
+                                    <span class="articleType am-badge am-badge-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                </div>
+                            </header>
+                            <div class="article-entry" style="height: 200px">
+                            </div>
+                            <div class="read-all">
+                                <a href="#" target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a>
+                            </div>
+                            <hr>
+                            <div class="article-tags">
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                                <i class="am-icon-tag"><a class="tag" href="#"> &nbsp;&nbsp;&nbsp;&nbsp;</a></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-row" id="page-father">
+                    <div id="pagination">
+                        <ul class="am-pagination  am-pagination-centered">
+                            <li class="am-disabled"><a href="#">&laquo; 上一页</a></li>
+                            <li class="am-active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">下一页 &raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="site-info am-show-sm-only">
+                    <h5 class="site-title">
+                        <i class="am-icon-info site-icon"></i>
+                        <strong style="margin-left: 15px">网站信息</strong>
+                    </h5>
+                    <ul class="site-default" style="height: 200px">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-lg-3">
+                <div id="right">
+
+                    <h3 class="widget-title"></h3>
+                    <div class="widget">
+                        <div class="bg-danger">'
+                            <div id="music">
+                                <audio src=" " controls class="aud"></audio>
+                            </div>
+
+                            <div id="musicList">
+                                <ul class="mlist">
+                                    <li class="music1">Love theme from tiga</li>
+                                    <li class="music2">七月的风</li>
+                                    <li class="music3">起风了-买辣椒不用券</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tag-cloud">
+                        <h3 class="widget-title">标签云</h3>
+                        <div class="widget-tag-cloud">
+                            <span>暂无标签</span>
+                        </div>
+                    </div>
+
+                    <div class="site-info am-hide-sm-only">
+                        <h5 class="site-title">
+                            <i class="am-icon-info site-icon"></i>
+                            <strong style="margin-left: 15px">网站信息</strong>
+                        </h5>
+                        <ul class="site-default" style="height: 200px">
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/index_pages.js"></script>
+    <script src="js/music.js"></script>
+
+    <!--引入共有底部-->
+    <div th:replace="footer :: footer"></div>
+
+</div>
+
+
+</body>
+</html>

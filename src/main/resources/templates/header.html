@@ -1,0 +1,60 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<!--所有页面共有头部-->
+<div th:fragment="header">
+    <div class="header">
+        <div class="am-topbar" style="margin-bottom: 0">
+            <h1 class="am-topbar-brand">
+                <a href="/" class="blogTitleName"><img src="/img/dog.jpg" class="imgStyle">孟尝君mzy</a>
+            </h1>
+
+            <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+
+
+                <ul class="am-nav am-nav-pills am-topbar-nav">
+                    <li><a class="top_bar" href="/" style="cursor: pointer;"><span class="am-icon-home"></span>&nbsp;首页</a>
+                    </li>
+                    <li><a class="top_bar" href="/categories" style="cursor: pointer;"><span class="am-icon-th"></span>&nbsp;分类</a>
+                    </li>
+                    <li><a class="top_bar" href="/tags" style="cursor: pointer;"><span class="am-icon-tags"></span>&nbsp;标签</a>
+                    </li>
+                    <li><a class="top_bar" href="/resoure" style="cursor: pointer;"><span
+                            class="am-icon-calendar-plus-o"></span>&nbsp;资源</a></li>
+                    <li><a class="top_bar" href="/aboutme" style="cursor: pointer;"><span class="am-icon-user"></span>&nbsp;关于我</a>
+                    </li>
+                </ul>
+
+                <div class="am-topbar-right" th:if="${session.sessionPhone}">
+                    <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+                        <button class="personalSpace am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
+                                data-am-dropdown-toggle><span th:text="${session.sessionUserName}"></span> <span
+                                class="am-icon-caret-down"></span></button>
+                        <ul class="am-dropdown-content">
+                            <li><a href="/superadmin"> 网站后台管理</a></li>
+                            <hr style="margin: 10px 0 5px 0;">
+                            <li><a th:href="@{/loginOut}">退出登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+<!--                <div class="am-topbar-right" th:unless="${session.sessionPhone}">-->
+<!--                    <a href="/register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm"-->
+<!--                       style="color: white">注册</a>-->
+<!--                </div>-->
+                <div class="am-topbar-right" th:unless="${session.sessionPhone}">
+                    <a href="/login" class="loginBtn am-btn am-btn-primary am-topbar-btn am-btn-sm"
+                       style="color: white">登录</a>
+                </div>
+
+                <div class="am-topbar-right writing am-hide-md-down">
+                    <a href="/editor" target="_blank" style="text-decoration: none">
+                        <img class="am-circle" src="/img/dog.jpg">
+                        <span class="write-word">写博客</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

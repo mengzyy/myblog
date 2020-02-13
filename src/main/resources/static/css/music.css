@@ -1,0 +1,54 @@
+#music {
+    /*border-radius: 10px;*/
+    margin-top:-5px;
+    position: relative;
+
+
+}
+
+#music .aud{
+    outline:none;
+    border: 3px solid black;
+    border-radius: 30px;
+    margin-left: -5px;
+
+}
+.play{
+    color: white;
+    background-color: #87CEFA;
+    margin:0 6px;
+}
+
+#musicList{
+
+    margin-left: 30px;
+    margin-right:-10px;
+    margin-top: 10px;
+    /*overflow: hidden;*/
+    /*height: 20px;*/
+    /*background: #e8bbd0;*/
+
+
+}
+
+#musicList .mlist{
+    margin: auto;
+}
+#musicList ul li{
+    line-height:30px;
+    text-align: center;
+    cursor:pointer;
+    list-style: none;
+    padding-right: 15px;
+    /*height:21px;*/
+    /*overflow: hidden;*/
+}
+
+#musicList ul li:hover{
+    line-height:45px;
+    text-align: center;
+    cursor:pointer;
+    margin-right: 20px;
+    background-color: #F0F8FF;
+    border-radius:6px;
+}

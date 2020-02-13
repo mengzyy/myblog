@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${article.getArticleTitle()}"></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="博客,个人,学习,IT,生活,孟中艺">
+    <meta name="description" content="爱编程,爱生活。">
+
+    <link rel="icon" type="image/x-icon" href="/img/my.jpg">
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/show.css">
+    <link rel="stylesheet" href="css/editormd/editormd.min.css"/>
+    <link rel="stylesheet" href="css/editormd/editormd.preview.min.css"/>
+    <link href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+    <link href="https://lib.baomitu.com/font-awesome/5.8.0/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+    <link href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
+
+
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://lib.baomitu.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+
+    <!--    md样式编辑-->
+    <script src="js/editormd/editormd.js" charset="utf-8"></script>
+    <script src="lib/marked.min.js"></script>
+    <!--    让md看起来好看-->
+    <script src="https://lib.baomitu.com/prettify/r298/prettify.min.js"></script>
+    <script src="https://lib.baomitu.com/raphael/2.2.7/raphael.min.js"></script>
+    <script src="https://lib.baomitu.com/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+    <script src="https://lib.baomitu.com/flowchart/1.11.3/flowchart.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--    &lt;!&ndash;使用共有头部&ndash;&gt;-->
+    <div th:replace="header :: header"></div>
+    <div id="main">
+        <div class="am-container">
+            <div class="am-g">
+                <div class="am-u-sm-12 am-u-lg-12">
+                    <div class="content">
+                        <div class="article">
+                            <div class="zhy-article-top">
+                                <div class="article-title"><h1 th:text="${article.getArticleTitle()}"></h1></div>
+                                <div class="article-info row">
+                                    <div class="article-info article-info-publishDate"><i
+                                            class="am-icon-calendar"><i class="articleCategoryColor"
+                                                                        th:text="${article.getPublishDate()}">
+                                    </i></i></div>
+                                    <div class="article-info article-info-originalAuthor"><i class="am-icon-user"
+                                                                                             th:text="${article.getAuthor()}">
+                                    </i></div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="article-content">
+                                <div id="wordsView">
+                                <textarea style="display:none;" name="editormd-markdown-doc" id="mdText"
+                                          th:text="${article.getArticleContent()}"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--引入共有底部-->
+    <div th:replace="footer :: footer"></div>
+</div>
+
+
+<!--填充文章-->
+<script src="js/show.js"></script>
+
+
+</div>
+
+
+</body>
+</html>
