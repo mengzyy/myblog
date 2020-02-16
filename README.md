@@ -10,5 +10,6 @@
 + 数据库框架 mybatis 通用mapper tk.mapper
 + springboot  spring aop 做权限检查
 + fastjson lombak等
++ idea连接docker 方便部署
 
 
