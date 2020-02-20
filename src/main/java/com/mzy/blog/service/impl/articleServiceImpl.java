@@ -120,6 +120,8 @@ public class articleServiceImpl implements articleService {
     @Override
     //将文章信息加载至数据库
     public Boolean insertArticle(Article article) {
+
+
         Random random = new Random();
         List<String> tagsList = new ArrayList<>();
         List<String> publishTags = article.getArticleTagsValue();
@@ -149,7 +151,7 @@ public class articleServiceImpl implements articleService {
                 try {
                     Example example = new Example(Tags.class);
                     Tags tags = tagsMapper.selectOne(tag);
-                    example.createCriteria().andEqualTo("tagArticle",tags.getTagArticle());
+                    example.createCriteria().andEqualTo("tagArticle", tags.getTagArticle());
                     tags.setTagArticle(tags.getTagArticle() + "," + article.getArticleId());
                     tags.setId(null);
                     tagsMapper.updateByExampleSelective(tags, example);

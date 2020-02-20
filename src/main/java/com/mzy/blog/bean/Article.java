@@ -2,8 +2,9 @@ package com.mzy.blog.bean;
 
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
+
+import javax.persistence.Id;
 import javax.persistence.Transient;
 import java.util.List;
 
