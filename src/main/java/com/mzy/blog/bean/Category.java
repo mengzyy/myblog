@@ -7,6 +7,7 @@ import org.springframework.data.annotation.Id;
 public class Category {
   @Id
   private Integer id;
+  
   private Integer cateId;
   private String cateName;
   private String articleId;

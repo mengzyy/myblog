@@ -10,10 +10,12 @@ import com.mzy.blog.mapper.visitorMapper;
 import com.mzy.blog.service.siteinfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class siteinfoServiceimp implements siteinfoService {
     @Autowired
     articleMapper articleMapper;

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
 
@@ -31,7 +32,7 @@ public class editorController {
     //发表文章
     @RequestMapping(value="/publishArticle",method=RequestMethod.POST)
     @ResponseBody
-    public String publishArticle(@RequestBody Article article) {
+    public String publishArticle(@RequestBody  Article article) {
         //将文章加入数据库中
         Boolean flag = articleService.insertArticle(article);
         requestResInfo requestReInfo = new requestResInfo();

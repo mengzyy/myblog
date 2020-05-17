@@ -6,6 +6,7 @@ import com.mzy.blog.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,7 @@ import java.util.List;
  * @create: 2020-02-13 13:25
  **/
 @Service
+@Transactional
 public class userServiceImpl implements userService {
     @Autowired
     userMapper userMapper;

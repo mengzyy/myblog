@@ -7,7 +7,7 @@ import com.mzy.blog.bean.Article;
 import com.mzy.blog.bean.ArticlesPage;
 import com.mzy.blog.bean.Tags;
 import com.mzy.blog.service.articleService;
-import com.mzy.blog.utils.RedisUtil;
+//import com.mzy.blog.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

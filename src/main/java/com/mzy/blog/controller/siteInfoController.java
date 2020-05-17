@@ -27,9 +27,9 @@ public class siteInfoController {
 
     }
 
-    @RequestMapping("/resoure")
-    public String resoure() {
-        return "404";
+    @RequestMapping("/picture")
+    public String picture() {
+        return "picture";
 
     }
 

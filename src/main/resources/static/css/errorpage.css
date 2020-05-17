@@ -1,9 +1,9 @@
 .error404Page{
+    margin-top: 50px;
     text-align: center;
 }
 .error404Page img{
-    width: 80%;
-    margin: 30px auto;
+    width: 50%;
 }
 .errorWords{
     text-align: center;
@@ -13,6 +13,7 @@
     font-family: 华文仿宋;
 }
 .error403Page{
+    margin-top: 50px;
     text-align: center;
 }
 .error403Page img{

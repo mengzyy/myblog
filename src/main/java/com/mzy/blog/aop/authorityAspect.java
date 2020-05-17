@@ -23,11 +23,13 @@ public class authorityAspect {
 
 
     //定义一个切入点
-    @Pointcut("execution(public * com.mzy.blog.controller.siteInfoController.mylove())")
+    //love or 写博客 需要登录认证
+    @Pointcut("(execution(public * com.mzy.blog.controller.siteInfoController.mylove())) || (execution(public * com.mzy.blog.controller.editorController.editor()))")
     public void myLovePermissionsAspect() {
 
 
     }
+
 
     //around切入方法
     @Around("myLovePermissionsAspect()")

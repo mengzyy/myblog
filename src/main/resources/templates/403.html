@@ -24,12 +24,15 @@
     <div th:replace="header :: header"></div>
     <div id="main">
         <div class="error403Page">
-            <img src="img/errorpage/403.jpg"/>
+            <img src="img/errorpage/403.jpeg"/>
         </div>
         <div class="errorWords">
             <div class="errorWords_display" style="margin-top: 30px">
                 <p>不好意思，您的权限不够，无法访问,尝试登录至管理员账号</p>
-                <p><a href="/"><u>返回首页</u></a><a href="#" style="margin-left: 30px"></a></p>
+                <a href="/" class="loginBtn am-btn am-btn-primary am-topbar-btn am-btn-sm"
+                   style="color: white">返回首页</a>
+                <a href="/login" class="loginBtn am-btn am-btn-primary am-topbar-btn am-btn-sm"
+                   style="color: white">登录</a>
             </div>
         </div>
     </div>
